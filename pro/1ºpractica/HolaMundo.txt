@@ -1,0 +1,9 @@
+public class HolaMundo{
+	public static void main(Strin[] args){
+
+	System.out.pintln("Hola Mundo");
+	System.out.println("Todos vamos a aprobar")
+	}
+
+
+}
