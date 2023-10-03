@@ -1,0 +1,24 @@
+*{
+    list-style: none;
+}
+
+:root{
+    --main-color: red;
+}
+
+html{
+    font-size: 62.5%; /* Esto es para que 1 rem en vez de ser 16 px, sean 10px, facilita la conversión rápida */
+}
+
+.bod{
+    background-color: #efefef;
+    font-family: 'Montserrat Alternates', sans-serif;
+}
+
+.titulo{
+    font-family: 'Krub', sans-serif;
+}
+
+/* .formulario p{
+    color: blueviolet;
+} */
