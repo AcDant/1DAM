@@ -1,9 +1,15 @@
-*{
-    list-style: none;
+:root{
+    --blanco:#fff;
+    --oscuro:#212121;
+    --primario: #ffc107;
+    --secundario:#0097a7;
+    --gris:#757575;
+
 }
 
-:root{
-    --main-color: red;
+
+*{
+    list-style: none;
 }
 
 html{
@@ -12,13 +18,8 @@ html{
 
 .bod{
     background-color: #efefef;
-    font-family: 'Montserrat Alternates', sans-serif;
-}
-
-.titulo{
     font-family: 'Krub', sans-serif;
 }
 
-/* .formulario p{
-    color: blueviolet;
-} */
+.titulo{
+}
