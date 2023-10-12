@@ -6,15 +6,15 @@
     --gris:#757575;
 
 }
+html{
+    font-size: 62.5%; /* Esto es para que 1 rem en vez de ser 16 px, sean 10px, facilita la conversión rápida */
+}
 
 
 *{
     list-style: none;
 }
 
-html{
-    font-size: 62.5%; /* Esto es para que 1 rem en vez de ser 16 px, sean 10px, facilita la conversión rápida */
-}
 
 .bod{
     background-color: #efefef;
