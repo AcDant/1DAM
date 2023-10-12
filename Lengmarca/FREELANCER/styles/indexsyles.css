@@ -6,20 +6,62 @@
     --gris:#757575;
 
 }
+
+*{
+    list-style: none;
+    box-sizing: border-box;
+}
 html{
     font-size: 62.5%; /* Esto es para que 1 rem en vez de ser 16 px, sean 10px, facilita la conversión rápida */
 }
 
-
-*{
-    list-style: none;
-}
-
-
 .bod{
-    background-color: #efefef;
+ font-size: 1.6rem;
     font-family: 'Krub', sans-serif;
 }
 
 .titulo{
+    text-align: center;
+    font-size: 2.8rem;
+}
+.titulo span{
+    font-size: 1.2rem;
+}
+
+.nav-bg{
+    background-color: var(--secundario);
+}
+
+.contenedor{
+    /* max-width: 120rem; */
+    /* border: red solid 2px; */
+    margin: 0 auto;
+}
+
+.navegacion-principal{
+    /* height: 5rem; */
+    display: flex;
+    text-align: center;
+    /* border: solid red 2px; */
+}
+
+.navegacion-principal ul{
+    width: 100%;
+    /* border: solid red 2px; */
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+}
+
+.navegacion-principal ul li a{ 
+    font-weight: bold;
+    color:var(--blanco);
+    text-decoration: none;
+    padding: 1rem;
+}
+
+.navegacion-principal ul li a:hover{
+    background-color: var(--primario);
+    height: 100%;
+    color: var(--oscuro)
 }
