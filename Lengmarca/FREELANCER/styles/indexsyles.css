@@ -62,6 +62,19 @@ html{
 
 .navegacion-principal ul li a:hover{
     background-color: var(--primario);
-    height: 100%;
+    /* height: 100%; */
     color: var(--oscuro)
+}
+
+.fondo-hero{
+    /* background-image: url("../images/hero.jpg"); */
+    background-image: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url("../images/hero.jpg");
+    height: 50rem;
+    max-width: 120rem;
+border: solid red 2px;
+}
+
+.fondo-hero h2, h3{
+    color:var(--blanco);
+    font-weight: bold;
 }
