@@ -1,18 +1,5 @@
-:root{
-    --blanco:#fff;
-    --oscuro:#212121;
-    --primario: #ffc107;
-    --secundario:#0097a7;
-    --gris:#757575;
 
-}
-
-
-
-
-
-
-
+/* Ayuda al resteo de la página */
 
 
 /* http://meyerweb.com/eric/tools/css/reset/ 
@@ -68,10 +55,14 @@ table {
 
 
 
+:root{
+    --blanco:#fff;
+    --oscuro:#212121;
+    --primario: #ffc107;
+    --secundario:#0097a7;
+    --gris:#757575;
 
-
-
-
+}
 
 
 *{
@@ -92,9 +83,15 @@ html{
     font-family: 'Krub', sans-serif;
 }
 
+/* .bod header{
+    display: flex;
+} */
+
 .titulo{
     text-align: center;
     font-size: 2.8rem;
+    height: 6rem;
+    border: red solid 2px;
 }
 .titulo span{
     font-size: 1.2rem;
