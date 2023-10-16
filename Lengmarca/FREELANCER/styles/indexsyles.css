@@ -141,8 +141,13 @@ html{
 
 .fondo-hero{
     /* background-image: url("../images/hero.jpg"); */
-    background-image: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url("../images/hero.jpg");
-    height: 50rem;
+    /* background-image: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url("../images/hero.jpg"); */
+    background-image: url("../images/hero.jpg");
+    background-repeat: no-repeat;
+    /* background-size: ; */
+    height: 45rem;
+
+    /* background-attachment: fixed; */
     /* max-width: 120rem; */
 /* border: solid red 2px; */
 }
@@ -150,6 +155,12 @@ html{
 .fondo-hero h2, h3{
     color:var(--blanco);
     font-weight: bold;
+}
+
+.contenido-hero{
+    background-color: rgba(0, 0, 0, 0.8);
+    width: 100%;
+    height: 100%;
 }
 
 /* FORMATO DE PC */
