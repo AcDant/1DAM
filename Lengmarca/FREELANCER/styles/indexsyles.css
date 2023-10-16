@@ -7,6 +7,73 @@
 
 }
 
+
+
+
+
+
+
+
+
+/* http://meyerweb.com/eric/tools/css/reset/ 
+   v2.0 | 20110126
+   License: none (public domain)
+*/
+
+html, body, div, span, applet, object, iframe,
+h1, h2, h3, h4, h5, h6, p, blockquote, pre,
+a, abbr, acronym, address, big, cite, code,
+del, dfn, em, img, ins, kbd, q, s, samp,
+small, strike, strong, sub, sup, tt, var,
+b, u, i, center,
+dl, dt, dd, ol, ul, li,
+fieldset, form, label, legend,
+table, caption, tbody, tfoot, thead, tr, th, td,
+article, aside, canvas, details, embed, 
+figure, figcaption, footer, header, hgroup, 
+menu, nav, output, ruby, section, summary,
+time, mark, audio, video {
+	margin: 0;
+	padding: 0;
+	border: 0;
+	font-size: 100%;
+	font: inherit;
+	vertical-align: baseline;
+}
+/* HTML5 display-role reset for older browsers */
+article, aside, details, figcaption, figure, 
+footer, header, hgroup, menu, nav, section {
+	display: block;
+}
+body {
+	line-height: 1;
+}
+ol, ul {
+	list-style: none;
+}
+blockquote, q {
+	quotes: none;
+}
+blockquote:before, blockquote:after,
+q:before, q:after {
+	content: '';
+	content: none;
+}
+table {
+	border-collapse: collapse;
+	border-spacing: 0;
+}
+
+
+
+
+
+
+
+
+
+
+
 *{
     list-style: none;
     box-sizing: border-box;
@@ -14,6 +81,11 @@
 html{
     font-size: 62.5%; /* Esto es para que 1 rem en vez de ser 16 px, sean 10px, facilita la conversión rápida */
 }
+
+@media (min-width:768px){
+
+}
+
 
 .bod{
  font-size: 1.6rem;
@@ -39,19 +111,23 @@ html{
 }
 
 .navegacion-principal{
-    /* height: 5rem; */
+    height: 12rem;
     display: flex;
     text-align: center;
     /* border: solid red 2px; */
 }
 
+
+
 .navegacion-principal ul{
     width: 100%;
+    flex-direction: column;
     /* border: solid red 2px; */
     display: flex;
     justify-content: space-around;
     align-items: center;
 }
+
 
 .navegacion-principal ul li a{ 
     font-weight: bold;
@@ -70,11 +146,33 @@ html{
     /* background-image: url("../images/hero.jpg"); */
     background-image: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url("../images/hero.jpg");
     height: 50rem;
-    max-width: 120rem;
-border: solid red 2px;
+    /* max-width: 120rem; */
+/* border: solid red 2px; */
 }
 
 .fondo-hero h2, h3{
     color:var(--blanco);
     font-weight: bold;
+}
+
+/* FORMATO DE PC */
+
+@media (min-width:768px){
+
+
+    .navegacion-principal{
+        height: 4rem;
+        display: flex;
+        text-align: center;
+        /* border: solid red 2px; */
+    }
+
+    .navegacion-principal ul{
+        display: flex;
+        width: 100%;
+        flex-direction: row;
+        justify-content: space-around;
+        align-items: center;
+    }
+
 }
