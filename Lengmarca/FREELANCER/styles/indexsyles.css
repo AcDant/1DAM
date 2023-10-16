@@ -74,9 +74,6 @@ html{
     font-size: 62.5%; /* Esto es para que 1 rem en vez de ser 16 px, sean 10px, facilita la conversión rápida */
 }
 
-@media (min-width:768px){
-
-}
 
 
 .bod{
