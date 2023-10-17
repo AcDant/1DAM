@@ -54,25 +54,26 @@ table {
 
 
 
-
-
 :root{
     --blanco:#fff;
     --oscuro:#212121;
     --primario: #ffc107;
     --secundario:#0097a7;
     --gris:#757575;
-
-}
-
-
-*{
-    list-style: none;
     box-sizing: border-box;
 }
+*, *:before, *:after{
+    box-sizing: inherit;
+}
+
 html{
     font-size: 62.5%; /* Esto es para que 1 rem en vez de ser 16 px, sean 10px, facilita la conversión rápida */
 }
+
+*{
+    list-style: none;
+}
+
 
 
 
@@ -81,9 +82,6 @@ html{
     font-family: 'Krub', sans-serif;
 }
 
-/* .bod header{
-    display: flex;
-} */
 
 .titulo{
     text-align: center;
@@ -106,19 +104,16 @@ html{
 }
 
 .navegacion-principal{
-    height: 12rem;
+    height: 4rem;
     display: flex;
     text-align: center;
     /* border: solid red 2px; */
 }
 
-
-
 .navegacion-principal ul{
-    width: 100%;
-    flex-direction: column;
-    /* border: solid red 2px; */
     display: flex;
+    width: 100%;
+    flex-direction: row;
     justify-content: space-around;
     align-items: center;
 }
@@ -142,11 +137,7 @@ html{
     /* background-image: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url("../images/hero.jpg"); */
     background-image: url("../images/hero.jpg");
     background-repeat: no-repeat;
-    /* background-size: ; */
     height: 45rem;
-
-    /* background-attachment: fixed; */
-    /* max-width: 120rem; */
 /* border: solid red 2px; */
 }
 
@@ -156,29 +147,64 @@ html{
 }
 
 .contenido-hero{
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    justify-content: center;
+    align-items: center;
     background-color: rgba(0, 0, 0, 0.8);
     width: 100%;
     height: 100%;
 }
 
-/* FORMATO DE PC */
+.contenido-hero h2, button, div{
+    text-align: center;
+    /* border: 2px solid red; */
+}
 
-@media (min-width:768px){
+.contenido-hero div{
+    border: red solid 2px;
+}
+
+.diseño{
+    height: 50%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+.icon-ana{
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    /* height: 50%; */
+    height: 33%;
+}
+
+.contact{
+    height: 33%;
+    border: 2px red solid;
+}
+
+/* FORMATO DE MOVIL */
+
+@media (max-width:768px){
 
 
-    .navegacion-principal{
-        height: 4rem;
-        display: flex;
-        text-align: center;
-        /* border: solid red 2px; */
+
+.navegacion-principal {
+    height: 12rem;
+    display: flex;
+    text-align: center;
+    /* border: solid red 2px; */
+}
+    
+.navegacion-principal ul{
+    width: 100%;
+    flex-direction: column;
+    /* border: solid red 2px; */
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
     }
-
-    .navegacion-principal ul{
-        display: flex;
-        width: 100%;
-        flex-direction: row;
-        justify-content: space-around;
-        align-items: center;
-    }
-
 }
