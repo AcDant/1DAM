@@ -186,17 +186,30 @@ html{
 
 .contact{
     height: 33%;
-    margin-top: 2rem;
+    margin-top: 3rem;
     margin-bottom: 2rem;
     /* border: 2px red solid; */
 }
 
+
+/* *******ESTOY USANDO EL a href, no este button ********************************************* */
 .contact button{
     background-color: var(--secundario);
     color: var(--blanco);
     padding: 0.8rem 2.6rem;
     border-radius: 0.8rem;
     font-weight:bold;
+}
+/* *************************************************** */
+.contact a{
+    background-color: var(--secundario);
+    color: var(--blanco);
+    padding: 0.8rem 2.6rem;
+    border-radius: 0.8rem;
+    text-transform: uppercase;
+    font-weight:bold;
+    text-decoration: none;
+    border: none;
 }
 
 .cuerpo{
@@ -231,7 +244,7 @@ html{
     flex-direction: row;
     height: 100%;
     width: 100%;
-    /* border: solid red 2px; */
+    border: solid red 2px;
 }
 
 .titu-h3{
@@ -366,4 +379,27 @@ fieldset legend{
     justify-content: space-around;
     align-items: center;
     }
+
+    .contact{
+        height: 33%;
+        margin-top: 3rem;
+        margin-bottom: 2rem;
+        width: 90%;
+        /* border: 2px red solid; */
+    }
+
+    .contact a{
+        display: block;
+        background-color: var(--secundario);
+        color: var(--blanco);
+        padding: 0.8rem 2.6rem;
+        border-radius: 0.8rem;
+        /* width: auto; */
+        text-transform: uppercase;
+        font-weight:bold;
+        text-decoration: none;
+        border: none;
+        /* border: rgb(230, 6, 111) solid 1px; */
+    }
+
 }
