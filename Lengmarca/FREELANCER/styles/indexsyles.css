@@ -413,7 +413,109 @@ fieldset legend{
 
 
     .services{
+        flex-direction: column;
+        align-items: center;
         /* display: grid; */
+        
     }
+
+    .form-zone{
+        /* width: 100%; */
+    }
+
+    .formulario{
+        width: min( 60rem,90%);
+        display: flex;
+        flex-direction: column;
+    }
+
+
+    .campos1{
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: space-between;
+        /* margin: 2rem 0rem 2rem 1rem; */
+        color: var(--blanco);
+        /* border: solid red 1px; */
+    }
+
+
+    .campo1{
+        display: flex;
+        flex-direction: column;
+        /* justify-content: space-around; */
+        width: 100%;
+        margin-top: 0.5rem;
+        /* margin-bottom: 1rem; */
+        align-items: start;
+        /* border: solid blue 1px; */
+    }
+
+
+    .campo1 input{
+        /* height: 3.5rem; */
+        padding: 1rem;
+        width: 100%;
+        border-radius: 0.5rem;
+        margin-top: 0.5rem;
+    }
+    
+    .campos1 label{
+        font-weight: bold;
+        /* display: block; */
+    } 
+
+    .campos2{
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: space-between;
+        /* margin: 2rem 0rem 2rem 1rem; */
+        color: var(--blanco);
+        /* border: solid red 1px; */
+    }
+
+
+    .campo2{
+        display: flex;
+        flex-direction: column;
+        /* justify-content: space-around; */
+        width: 100%;
+        margin-top: 0.5rem;
+        /* margin-bottom: 1rem; */
+        align-items: start;
+        /* border: solid blue 1px; */
+
+    }
+
+    .campo2 input{
+        /* height: 3.5rem; */
+        padding: 1rem;
+        width: 100%;
+        border-radius: 0.5rem;
+        margin-top: 0.5rem;
+    }
+    
+    .campos2 label{
+        font-weight: bold;
+        /* display: block; */
+    } 
+
+    .boton-form{
+            background-color: var(--secundario);
+            color: var(--blanco);
+            padding: 0.8rem 2.6rem;
+            margin-right: 2rem;
+            margin-left: 2rem;
+            border-radius: 0.8rem;
+            font-weight:bold;
+            outline: none;
+            border:none;
+            /* text-decoration: none; */
+            /* border: 2px soid red; */
+        
+    }
+
 
 }
