@@ -413,7 +413,7 @@ fieldset legend{
 
 
     .services{
-        display: grid;
+        /* display: grid; */
     }
 
 }
