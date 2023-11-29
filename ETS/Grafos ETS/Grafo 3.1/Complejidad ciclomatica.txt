@@ -1,0 +1,5 @@
+ 16 aristas - 13 nodos + 2 = 5
+
+5 regiones (4 + 1) = 5
+
+4 nodos desicion + 1 = 5
