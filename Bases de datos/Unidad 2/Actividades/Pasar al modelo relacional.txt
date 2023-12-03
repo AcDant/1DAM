@@ -1,0 +1,76 @@
+camiones(matricula-,modelo,tipo,potencia)
+camioneros(dni-,nombre,direccion,tlfno,salario,poblacion)
+paquetes(codigo-,descripcion,destinatario,direcDesct,dni*,codProv) pAQUETE DNI HACE REFERENCIA A CAMIONERO DNI Y PUEDE SER NULL (porque hay veces en las que no se conoce que camionro distibuye los paquetes.)
+provincias(codProvincia-,nombre)
+conducir(dni-*,matricula-*)
+
+- ACTIVIDAD 4 CARDINALIDAD 1:1
+
+Actor(codigo-,nombre)
+personaje(codigo-,pelicula,nombre,codigoActor*) EL 0;1 tiene la clave del 1;1
+
+- ACTIVIDAD 5 CARDINALIDAD 1:1
+
+Historiales(num-,hospitalRef,medicoResp)
+Pacintes(NumSS-,dni,nombre,num*,fechaAper)
+
+- ACTIVIDAD 6 CARDINALIDAD 1:1
+
+EMPLEADOS(DNI-,NOMBRE,dni_Jefe*)
+
+- ACTIVIDAD 7 CARDINALIDAD 1:1
+
+Personas(dni-,nombre,direccion,telefono)
+Hijos(dni_padre-*,dni_hijo-*) aqui el dni_padres es tambien clave primaria porque si solo lo fuera el dni del hijo, en una tabla coincidiria una entrada del hijo con un padre con la entrada del mismo hijo con  el otro padre.
+
+- Ejemplo de entidad debil
+
+PRESTAMO(num_prestamo-,importe)
+pago(num_prestamo-*importe_pago,fecha_pago) 
+
+- ACTIVIDAD 8 CARDINALIDAD 1:1
+
+Libros(isbn-,titulo)
+Ejemplares(ident-, isbn-*,estado)
+
+Actividad 9
+DEPARTAMENTO(num_depart-,nombre,presupuesto)
+empleado(num_depart-*,num_empleado,fecha_ingreso,nombre_emple) Num_depart hace referencia al numero  departamento de departamento
+
+Actividad 10
+
+HAGO EL CASO A, PORQUE HAY POCOS ATRIBUTOS EN LOS HIJOS DE EMPLEADO Y LA TABLA EMPLEADO ES NECESARIA
+
+Personas(id_pers-,nombre,calle,ciudad)
+Esmpleados(sueldo,id_pers-*,n_despacho,num_caja,horas_trab,TIPO) TOPO= Oficial, cajero, secretaria
+Cliente(cese,id_pers-*,)
+
+Actividad 11
+
+CASO C, vida tiene una relacion, por lo que hay que hacerle una tabla y aprovechamos y se la hacemos a todos y ya esta
+
+polizas_vida(numero-,fech_inicio,fech,fin)
+polizas_auto(numero-,fech_inicio,fech,fin,matricula)
+polizas_vivienda(numero-,fech_inicio,fech,fin,domicilio)
+Beneficiario(dni-,nombre,fech_naci,numero-*)
+
+Actividad 12
+
+Caso B, orque si usamos el tipo a y lo metemos todo en el padre, hay muchas columnas vacias, y no seria eficiente
+y el caso c habria mucha redundancia de datos al poner los del padro en todas las tablas.
+
+Aula(n_aula-,piso,pasillo,n_plazas,proyector,proyector,pizarra)
+comun(n_aula-*)
+s.ordenadores(n_aula-*,n_ordenadores,scaneres,impresoras,varios)
+laboratoria(n_aula-*tipo,equipamiento)
+
+
+Ejemplo normaliacion
+
+Clave: curso y fecha
+cumple la 1F pero no la segunda porque el nombre del curso no depende funcionalmente de toda la clav (solo depende el curso, no de fecha)
+hay que crear la tabla curso:
+cursos(cod curso-,nombre)
+Eventos(cod_curso-*,fecha-,cod_room*)
+Pero no cumple con la 3F porque capacidad depende de room, asi que se crea otra tabla
+Habitaciones(cod_room,capacidad,avaliable)

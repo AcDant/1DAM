@@ -1,0 +1,4 @@
+animales(id_animal-,dni*,f_nacimiento,nombre,raza,peso,altura,vacunas,descripcion)
+consulta(fecha_cons-,id_animal-*,motivo,diagnostico,tratamiento)
+propietarios(dni-,apellidos,nombre,direccion,telefono)
+

@@ -1,0 +1,12 @@
+EL COCHE puede ser ELECTRICO Y GASOLINA
+
+
+clientes(nif-,matricula*,nombre,direccion,ciudad)
+telefonos(NIF-*telefono-,)
+coches(matricula-,marca,modelo,precio, TIPO{ELECTRICO O GASOLINA})
+colores(color-,matricula,*)
+revisiones(codigo-,matricula*,filtro,aceite,frenos) ENTIDAD DEBIL. CLAVE DEBIL codigo
+
+sI VAN A DARSE MUCHOS 0 POR EL LADO DE REVISIONES, HAY QUE HACERLE UNA TABLA.
+
+aL FINAL, DICES DE DONDE VIENEN LAS CLAVES FORANEAS Y SI OUEDEN SER NULAS

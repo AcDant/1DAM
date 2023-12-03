@@ -1,0 +1,118 @@
+Linyi, Margot, Daniel Ojeda Martel, Luis Socorro Bravo de Laguna
+
+1.la liga de futbol
+
+jugadores(codjug-,nombre,fechaNac,posicion,codEq*)
+clave primaria codigoJug,codEq clave foranea hace referencia a equipo,no acepta nulo.
+
+equipos(codEq-,aforo,nombre,ciudad,DNIe*)
+clave primario codEQ,DNI clave foranea hace referencia a presidente,no acepta nulo.
+
+presidentes(DNI-,año,fechaNac,nombre,apellidos)
+clave primaria DNI.
+
+goles(codGol-,descripcion,minuto,codjug*,codPart*)
+Clave primaria CodGol,codjug clave foranea hace referencia a jugadores,no acepta nulo. 
+			codPart clave foranea hace refencia a partidos,no acepta nulo.
+
+partidos(codPart-,Golescasa,golesFuera,fecha)
+clave primaria codPart.
+
+juegas(codEQ-*,codPart-*)
+Clave primaria y foranea codEq de equipos,codPart de partidos.
+
+Ya esta en tercera forma normal no hace falta normalizar.
+
+
+2.maraton
+
+banderas(CodB-,NumColores,nombre)
+clave primaria codB.
+
+Paises(CodigoP-,habitantes,nombre,codB*)
+clave primaria codP,codB clave foranea hace referencia a Banderas,no acepta nulo.
+
+ciudades(codC-,habitantes,nombre,CodP*)
+clave primaria codC,codP clave foranea hace referencia a paises,no acepta nulo.
+
+maratones(codM-,nombre,codC*,codsubM*)
+clave primaria codM,codC clave foranea hace referencia a ciudad,no acepta nulo
+			CodsubM clave foranea hace referencia a submaratones.
+
+ganadores(DNI-*,codM-*)
+clave primaria y clave foranea DNI hace referencia a personas y codM a maratones.
+
+personas(Dni-,direccion,nombre)
+clave primaria DNI.
+
+Ya esta en tercera forma normal no hace falta normalizar.
+
+
+
+3. Empresa de transportes - camiones
+
+camionero(DNI-, DniJefe*, nombre, dirección, tlfn, salario, población)
+Clave primaria DNI. Clave foranea DNIJefe, hace referencia a camionero, no acepta nulo.
+
+paquetes(codPaq-, codProvincia*, descripción, destinatario, direcDest)
+Clave primaria codPaq. Clave foranea codProvincia, hace referencia a Provincia, no acepta nulo.
+
+camión(matricula-, modelo, tipo, potencia)
+Clave primaria matricula.
+
+provincia(codProvincia-, nombre)
+Clave primaria provincia.
+
+certificado(CodPaq-*)
+Clave primaria codPaq. Clave foranea codPaq, hace referencia a paquete, no acepta nulo.
+
+ordinario(CodPaq-*, fechaEntrada)
+Clave primaria codPaq. Clave foranea codPaq, hace referencia a paquete, no acepta nulo.
+
+seguimiento(CodPaq-*, CodSeguimiento--, fecha, estado)
+Clave primaria codPaq y CodSeguimiento. Clave foranea codPaq hace referencia a paquete, no acepta nulo.
+
+conducciones(DNICamionero-*, MatriculaCamion-*, fechaEnt-, fechaSal,)
+Clave primaria DNICamionero, MatriculaCamion y FechaEnt. Clave foranea DNICamionero, hace referencia a camionero, no acepta nulos. Clave foranea MatriculaCamion, hace referencia a camion, no acepta nulos.
+
+distribuciones(DNICamionero-*, codPaquete-*)
+Clave primaria DNICamionero y codPaquete. Clave foranea DNICamionero, hace referencia a camionero, no acepta nulo. Clave foranea codPaq hace referencia a paquete, no acepta nulo.
+
+
+
+4. SHAZAM
+
+usuarios(codUsuario-, nombreUsuario, apellidos, tlfn, email, notificaciones)
+Clave primaria codUsuario
+
+listas(codLista-, nombreLista)
+Clave primaria codLista
+
+canciones(codCancion-, nombreCancion, duracion, huella)
+Clave primaria CodCancion
+
+albumes(codAlbum-, nombre, portada, añoLanzamiento)
+CLave primaria codAlbum
+
+artistas(codArtista-, nombreArtista)
+Clave primaria codArtista
+
+agrupacion(codLista-*, codCancion-*)
+Clave primaria y foranea codLista, que hace referencia a Listas. Clave primaria y foranea codCancion, que hace referencia a Canciones
+
+cazadas(codUsuario-*, codCancion-*, fecha-, provincia, localidad)
+Clave primaria y foranea codUsuario, que hace referencia a usuarios. Clave primaria y foranea codCancion, que hace referencia a canciones. Clave primaria fecha.
+
+seguimientos(codUsuario-*, codArtista-*)
+Clave primaria y foranea codUsuario, que hace referencia a usuarios. Clave primaria y foranea codArtista,  que hace referencia a artistas.
+
+tienen(codCancion-*, codAlbum-*)
+Clave primaria y foranea codCancion, que hace referencia a canción. Clave primaria y foranea codAlbum, que hace referencia a albumes.
+
+(Como un albúm puede ser creado por más de un artista, creamos una tabla a parte)
+creaciones(codArtista-*, codAlbum-*)
+Clave primaria y foranea codArtista, que hace referencia a artistas. Clave primaria y foranea codAlbum, que hace referencia a albumes.
+
+
+
+

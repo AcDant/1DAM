@@ -1,0 +1,31 @@
+
+
+
+
+
+Actividad 1
+
+Documento HTML: Su contenido no se puede interpretar.
+.html	Lenguaje de hipertexto que estructura las páginas web esta formado por etiquetas que contienen texto, imágenes, videos…
+Puede ser abierto por File Viewer Plus en Windows, Brackets en Mac y File Helper en Web.
+
+
+
+Documento PHP: Su contenido no es interpretable.
+.php	Archivo que contiene hipertextos en php, puede contener funciones, formularios.
+Puede ser abierto por Eclipse en Windows, MAMP en Mac, Firas Moussa phpwin en IOS.
+
+
+
+Documento SQL: Su contenido no es interpretable.
+.sql	Contiene lenguaje de bases de datos con el que se accede a información en una base de datos.
+Puede ser abierto por MySQL en Windows, Richarson RazorSQL en Mac, File Viewer for Android en Android .
+
+
+
+Actividad 2 
+
+Lo que ha sucedido es que me ha abierto el blog de notas sin problema.
+
+
+Actividad 3
