@@ -1,0 +1,31 @@
+Medicos(-cod-, nombre)
+Pacientes(-codigo-,nombre)
+atienciones(cod*,codigo*,-fecha-,-hora-)
+
+Actividad 1 - N:M
+
+Empleados(-dni-,direccion,nombre)
+Proyetos(-codigo-,nombre)
+trabajos(-dni*-,-codigo*-)
+
+Trabajos dni hace referencia a empleados dni y no es nulo
+Trabajos codigo hace referencia a proyectos condigo y no es nulo
+Con los atributos multivalor hayq nue hacer otra tabla
+
+Actores (-codigo-,nombre,numLicencia*,contrato)
+Representantes(-numLicencia-, nombre)
+
+EJEMPLO2 1:N
+
+Profesores(cod-,nmbre)
+Estudiante(cod-,nombre)
+Tutorias(codp-*,codestudiant-*,fecha)
+
+ACTIVIDAD 2
+
+CLIENTES(DNI-,nombre,pellidos,fechaNac,tlfn)
+PRODUCTOS(codigo-,nombre,precio,nif*)
+PROVEEDOR(NIF-,nombre,direccion)
+Compras(dni-*,codigo-*,)
+
+Para reflejar la relacion proveedor y producto hay que poner la como clave foranea el nif de proveedor en productos
