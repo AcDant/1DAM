@@ -1,0 +1,28 @@
+variables:root{
+--pana: rgb ;
+}
+
+reset de pagina
+
+*,
+*:before,
+*:after {
+    list-style: none;
+    box-sizing: border-box;
+}
+
+estandarizar tamaño letra
+
+html{
+    font-size: 62.5%;
+}
+
+Quitar borde a boton
+
+border:none;
+
+sombras
+
+.cuerpo{
+    box-shadow: 0.2rem 0.4rem 1rem rgb(49, 48, 48);
+}
