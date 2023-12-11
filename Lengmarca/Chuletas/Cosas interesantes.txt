@@ -26,3 +26,97 @@ sombras
 .cuerpo{
     box-shadow: 0.2rem 0.4rem 1rem rgb(49, 48, 48);
 }
+
+
+
+
+Position absolute y relative
+*{
+ box-sizing: border-box;
+}
+
+#d1{
+    background-color: blue;
+    opacity: 0.5;
+    height: 100px;
+    width: 100px;
+    position: absolute;
+    top: 100px;
+    left: 100px;
+}
+#d2{
+    background-color: red;
+    opacity: 0.5;
+    height: 100px;
+    width: 100px;
+    position: absolute;
+    top: 115px;
+    left: 115px;
+}
+#d3{
+    background-color: green;
+    opacity: 0.5;
+    height: 100px;
+    width: 100px;
+    position: absolute;
+    top: 130px;
+    left: 130px;
+}
+
+
+Formularios
+
+ <label for="name">Nombre:</label>
+      <input type="text" id="name" name="user_name" />
+
+
+<label for="mail">Correo electrónico:</label>
+      <input type="email" id="mail" name="user_mail" />
+
+ <label for="msg">Mensaje:</label>
+      <textarea id="msg" name="user_message"></textarea>
+
+
+radio
+    <input type="radio" name="empleoactual" value="tiempocompleto"> Tiempo completo<br>
+
+    <input type="radio" name="empleoactual" value="mediodia"> Medio día<br>
+
+    <input type="radio" name="empleoactual" value="sinempleo"> Sin empleo
+
+ <input type="checkbox" name="front" id="front">
+    <input type="checkbox" name="back" id="back">
+
+
+TABLAS
+
+<table class="tabla">
+        <tr>
+          <th>Nombre</th>
+          <th>Enlace</th>
+          <th>Descripción</th>
+        </tr>
+        <tr>
+          <td>Prueba examen</td>
+          <td>
+            <a href="https://acdant.github.io/Practica_consultoria/"
+              >https://acdant.github.io/Practica_consultoria/</a
+            >
+          </td>
+          <td>Práctica de preparación para examen</td>
+        </tr>
+        <tr>
+          <td>FrontEndStore</td>
+          <td><a href=""></a></td>
+          <td>Página donde comprar camisetas</td>
+        </tr>
+        <tr>
+          <td>Prueba examen 2</td>
+          <td><a href="https://acdant.github.io/FrontMentor-Subscription/">https://acdant.github.io/FrontMentor-Subscription/</a></td>
+          <td>Práctica FrontMentor</td>
+        </tr>
+          <td>Esta misma página</td>
+          <td><a href="https://acdant.github.io/Freelancer_portfolio/">https://acdant.github.io/Freelancer_portfolio/</a></td>
+          <td>Portfolio</td>
+        </tr>
+      </table>
