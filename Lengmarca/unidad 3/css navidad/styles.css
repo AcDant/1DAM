@@ -1,8 +1,6 @@
-:root{
-  --black:#000000;
-
+:root {
+  --black: #000000;
 }
-
 
 *,
 *:before,
@@ -28,9 +26,7 @@ main {
   display: flex;
   flex-direction: column;
   align-items: center;
-
 }
-
 
 .box {
   display: flex;
@@ -74,32 +70,37 @@ main {
   /* border: red solid 2px; */
 }
 
-
-.box-t, .box-b{
+.box-t,
+.box-b {
   width: 100%;
   height: 12rem;
   position: relative;
   z-index: 1;
-  transition: 0.5s;
-  /* border: rgb(55, 0, 255) solid 2px; */
+  transition: 0.3s;
+  border: rgb(55, 0, 255) solid 2px;
+}
+
+.box-up,
+.box-front {
+  width: 100%;
+  height: 12rem;
+  position: relative;
+}
+
+/* .box-up {
+} */
+
+.box-front {
+  z-index: 2;
+  border: #fff solid 2px;
+  bottom: 24rem;
+  width: 60%;
 }
 
 .box-t {
   background-color: var(--black);
-
 }
 
 .box-b {
   background-color: var(--black);
 }
-
-/* .box-t:hover {
-  transition: 0.5s;
-  transform: translate(0rem, 6rem);
-} */
-
-/* .box-b:hover {
-  transition: 0.5s;
-  transform: translate(0rem, -6rem);
-} */
-

@@ -12,32 +12,36 @@ function eyeball(){
 }
 
 // Cerrando ojos
-document.querySelector('.box').addEventListener('mouseover',eyecloset,eyecloseb);
+document.querySelector('.box-front').addEventListener('mouseover',eyecloset);
 function eyecloset(){
   const eyeclosetop = document.querySelector('.box-t');
-  eyeclosetop.style.transform = "translate(0rem, 6rem)";
-}
+  eyeclosetop.style.transform = "translate(0rem, 5rem)";
 
-document.querySelector('.box').addEventListener('mouseover',eyecloseb);
-function eyecloseb(){
   const eyeclosebot = document.querySelector('.box-b');
-  eyeclosebot.style.transform = "translate(0rem, -6rem)";
+  eyeclosebot.style.transform = "translate(0rem, -5rem)";
+
+  console.log("cierra")
 }
 
 // Abriendo ojos
 
-document.querySelector('.box').addEventListener('mouseout',eyeopent);
-
-document.querySelector('.box').addEventListener('mouseout',eyeopenb);
+document.querySelector('.box-front').addEventListener('mouseout',eyeopent);
 
 function eyeopent(){
   const eyeopentop = document.querySelector('.box-t');
   eyeopentop.style.transform = "translate(0rem, 0rem)";
+
+  const eyeopenbot = document.querySelector('.box-b');
+  eyeopenbot.style.transform = "translate(0rem, 0rem)";
+  console.log("abierto")
+
+
+
   // alert("holi")
 }
 
-function eyeopenb(){
-  const eyeopenbot = document.querySelector('.box-b');
-  eyeopenbot.style.transform = "translate(0rem, 0rem)";
-  // alert("holi")
-}
+// function eyeopenb(){
+//   const eyeopenbot = document.querySelector('.box-b');
+//   eyeopenbot.style.transform = "translate(0rem, 0rem)";
+//   alert("holi")
+// }
