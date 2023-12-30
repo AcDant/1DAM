@@ -42,7 +42,8 @@ main {
   /* width: 10%;
   height: 10%; */
   display: block;
-  background: #fff;
+  /* background: #fff; */
+  background: linear-gradient(red, blue);
   margin: 0 20px;
   border-radius: 50%;
   border: solid 2px rgb(9, 230, 82);
@@ -74,7 +75,8 @@ main {
 
 .box-t,
 .box-b {
-  width: 100%;
+  /* width: 100%; */
+  width: 30rem;
   height: 12rem;
   position: relative;
   z-index: 1;
