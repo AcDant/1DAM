@@ -54,7 +54,7 @@ main {
       background-position: center; */
 }
 
-.box .eye::before {
+/* .box .eye::before {
   content: " ";
   position: absolute;
   top: 50%;
@@ -65,17 +65,28 @@ main {
   border-radius: 50%;
   background: var(--black);
   border: 10px solid #2196f3;
-  /* background-image: url(./madara\ ethernal.svg);
+} */
+
+.eye-in{
+  width: 45px;
+  height: 45px;
+  position: absolute;
+  top: 50%;
+  left: 35px;
+  transform: translate(-50%, -50%);
+  border-radius: 50%;
+  background: var(--black);
+  border: 10px solid #2196f3;
+  /* border: solid 2px gold; */
+
+    /* background-image: url(./madara\ ethernal.svg);
   background-repeat: no-repeat;
   background-position: center; */
 }
 
-.box {
-}
 
 .box-t,
 .box-b {
-  /* width: 100%; */
   width: 30rem;
   height: 12rem;
   position: relative;
@@ -90,9 +101,6 @@ main {
   height: 12rem;
   position: relative;
 }
-
-/* .box-up {
-} */
 
 .box-front {
   z-index: 2;
