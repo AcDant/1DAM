@@ -13,6 +13,7 @@ function eyeball(){
 
 // Cerrando ojos
 document.querySelector('.box-front').addEventListener('mouseover',eyecloset);
+// document.querySelector('.box').addEventListener('mouseover',eyecloset);
 function eyecloset(){
   const eyeclosetop = document.querySelector('.box-t');
   eyeclosetop.style.transform = "translate(0rem, 5rem)";
@@ -26,6 +27,7 @@ function eyecloset(){
 // Abriendo ojos
 
 document.querySelector('.box-front').addEventListener('mouseout',eyeopent);
+// document.querySelector('.box').addEventListener('mouseout',eyeopent);
 
 function eyeopent(){
   const eyeopentop = document.querySelector('.box-t');
