@@ -19,12 +19,11 @@ body {
   align-items: center;
   min-height: 100vh;
   background-color: var(--black);
-  border: red solid 2px;
+  /* border: red solid 2px; */
 }
 
 main {
   width: 100%;
-  /* border: red solid 2px; */
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -33,9 +32,6 @@ main {
 .box {
   display: flex;
   justify-content: center;
-  /* width: 60%; */
-   /* width: 100vw;  */
-  /* border: rgb(17, 218, 67) solid 2px; */
 }
 
 .box .eye {
@@ -46,13 +42,9 @@ main {
   background: #fff;
   margin: 0 20px;
   border-radius: 50%;
-  border: solid 2px rgb(9, 230, 82);
-  box-shadow: 0 5px 45px rgba(35, 156, 51, 0.2), inset 0 0 15px #f21e1e,
-  inset 0 0 15px #f51c15;
-  z-index: 2;
-  /* background-image: url(./madara\ ethernal.svg);
-      background-repeat: no-repeat;
-      background-position: center; */
+  /* border: solid 2px rgb(9, 230, 82); */
+  box-shadow: 0 5px 45px rgba(35, 156, 51, 0.2), inset 0 0 15px #000000,
+  inset 0 0 15px #ffffff;
 }
 
 /* .box .eye::before {
@@ -69,40 +61,21 @@ main {
 } */
 
 .eye-in{
-  width: 8rem;
-  height: 8rem;
-
-  /* width: 3rem;
-  height: 3rem; */
+  width: 3rem;
+  height: 3rem;
   position: absolute;
   top: 50%;
   left: 3rem;
   transform: translate(-40%, -40%);
-  z-index: 1;
-  /* border: solid 2px gold; */
-  border: solid 2px var(--black);
+  border-radius: 50%;
+  background: var(--black);
+  border: 10px solid #2196f3;
   border-radius: 50%;
   /* background-image: url("./madara\ ethernal.svg"); */
-  background-image: url("./rinnegan\ paint.PNG");
-  background-size: contain;
-  background-repeat: no-repeat;
+  /* background-image: url("./rinnegan\ paint.PNG"); */
+  /* background-size: contain; */
+  /* background-repeat: no-repeat; */
 }
-
-.eye-out{
-  /* z-index: 2; */
-  opacity: 0;
-  border: 30px solid var(--black);
-
-}
-
-.eye-out1{
-  left: 14.5rem;
-}
-
-.eye-out2{
-  right: 14.5rem;
-}
-
 
 .box-t,
 .box-b {
@@ -111,7 +84,7 @@ main {
   position: relative;
   z-index: 2;
   transition: 0.3s;
-  border: rgb(55, 0, 255) solid 2px;
+  /* border: rgb(55, 0, 255) solid 2px; */
 }
 
 .box-up,
@@ -122,33 +95,10 @@ main {
   width: 30rem;
 }
 
-/* .box-up{
-  display: flex;
-  justify-content: center;
-  border: gold solid 2px;
-  top: 24rem;
-  z-index: 1;
-  background-color: #f51c15;
-  opacity: 1;
-} */
-
-/* .eye2{
-  position: relative;
-  width: 12rem;
-  height: 12rem;
-  display: block;
-  background: #fff;
-  margin: 0 20px;
-  border-radius: 50%;
-  border: solid 2px rgb(9, 230, 82);
-  opacity: 1;
-} */
-
 .box-front {
   z-index: 3;
-  border: #fff solid 2px;
+  /* border: #fff solid 2px; */
   bottom: 24rem;
-
 }
 
 .box-t {
