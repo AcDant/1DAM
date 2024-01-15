@@ -1,0 +1,42 @@
+Instalación y acceso a un Servidor MySQL en Ubuntu
+
+**sudo -i /su / sudo su
+
+Actualizar repositorio:
+apt-get update
+
+
+Instalar mysql
+apt-get install mysql-server (aunque pongamos server incluye un cliente)
+
+	Comandos interesantes: man y --version
+
+
+Acceso en local (cliente y servidor -> mismo equipo)
+mysql -u root -p (por defecto el usuario root, no hemos añadido usuarios)
+
+	-> system clear;
+	-> probar a mostrar todas las BD (show databases;)
+		information_schema: acceso a los metadatos de la BD (información sobre el servidor, nombres de tablas..)
+		performance_schema: permite recoger información sobre el comportamiento del servidor durante su funcionamiento.
+		sys: herramientas que ayudan a los admin y desarrolladores a interpretar los datos recopilados en el performance schema.
+	-> para salir quit
+
+
+Acceso desde otro equipo de la red
+mysql -h 127.0.0.1 -u root -p  <--- no funciona por permisos
+mysql -h localhost -u root -p
+
+	Sintaxis
+	mysql -h IP_SERVIDOR -u nombreUsuario -p nombreBD
+
+mysql -u root -p mysql
+(mostrar las tablas de esa BD)
+
+
+Acceso a local modificando el prompt
+mysql -u root -p --prompt="00-cynthia-BD> "
+
+	*ver help dentro de mysql y cambio de prompt
+
+Salir del cliente
