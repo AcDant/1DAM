@@ -1,0 +1,1 @@
+let elh1 = document.getElementsByTagName("h1")
