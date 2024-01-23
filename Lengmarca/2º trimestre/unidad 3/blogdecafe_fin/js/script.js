@@ -6,7 +6,14 @@ console.log(textoHeading);
 const enlaces = document.querySelectorAll(".navegacion a");
 console.log(enlaces);
 
-enlaces[0].textContent="Login";
+const alerta = (event) =>{
+    event.preventDefault();
+    console.log("entra");
+    window.alert("Seguro?");
+};
+
+enlaces[0].textContent="Login clica aqui";
+enlaces[0].addEventListener("click", alerta);
 enlaces[3].href="https://www.google.es";
 enlaces[0].classList.add("nueva_clase");
 enlaces[0].classList.remove("nueva_clase");
@@ -22,6 +29,8 @@ document.addEventListener("DOMContentLoaded", function(){
 window.onscroll = function(){
     console.log("Haciendo scroll")
 }
+
+
 
 
 
