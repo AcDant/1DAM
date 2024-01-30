@@ -31,14 +31,40 @@ window.onscroll = function(){
 }
 
 
+let imagen = document.querySelector(".contacto-bg");
+console.log(imagen);
+imagen.style.display = "none";
 
+let formulario = document.querySelector(".formulario");
+console.log(formulario);
 
-
-
-let contadorcito=0;
-const contador = () =>{
-    contadorcito++;
-    console.log(contadorcito);
-    contador();
+const datos = {
+    nombre:'',
+    email:'',
+    mensaje:''
 }
+const nombre = document.querySelector('#nombre');
+const email = document.querySelector('#email');
+const mensaje = document.querySelector('#mensaje');
+formulario.addEventListener('submit',function(e){
+    e.preventDefault();
+})
+
+
+
+let naveli = document.querySelectorAll(".navegacion__enlace");
+console.log(naveli);
+
+naveli.forEach((li)=>{
+    li.classList.remove('navegacion__enlace');
+    li.classList.add('rojo');
+    // li.style.color ="red";
+})
+
+// let contadorcito=0;
+// const contador = () =>{
+//     contadorcito++;
+//     console.log(contadorcito);
+//     contador();
+// }
 // contador();
