@@ -1,0 +1,151 @@
+Instalación MV:
+
+Marcar ubuntu rápido al iniciar la mv (la primera vez que instalamos ubuntu)
+	* si no lo marcas no pasa nada
+El proceso tarda
+
+
+
+------------------------------------------------
+Escritorio<Clic derecho< Display setting
+	Screen display - > Cambiar la configuracion de pantalla (si es necesario)
+		Pon la que se ajuste a tu monitor
+
+	Language and Region -> Cambiar el idioma del SO
+			<Manage installed Languages<Install/Remove
+			Desmarcar English y marcar Spanish
+			Si sale en gris reiniciar y ya está operativo
+
+
+	Teclado -> + Español (quitar inglés)
+	
+-----------------------------------------------
+
+	**Screenshoot de la MV	
+
+------------------------------------------------
+cambiar a otro usuario:
+
+su nombreUsuario
+sudo su (si no se tienen permisos)
+sudo -i -> para acceder al superusuario (a veces no funciona)
+
+
+apt-get update 
+	Se utiliza para actualizar, y eliminar cualquier paquete o version de ellos.
+	apt-get básicamente funciona en una base de datos de paquetes disponibles.
+
+apt-get upgrade
+	Después de actualizar la base de datos del paquete, el siguiente paso es actualizar los paquetes instalados.
+	Para actualizar todos los paquetes con actualizaciones disponibles, puede usar este comando.
+  	**Instala la versión de los paquetes actualizados
+
+
+apt-get install [paquete/software]
+	Si conoces el nombre del paquete, puede instalar fácilmente un programa con este comando
+
+
+**Recordar con flecha hacia arriba se va al comando anterior ejecutado y con tab se completa la sentencia
+
+
+apt-get remove [paquete/software]
+	Eliminar un paquete instalado. Es necesario conocer el nombre del paquete.
+
+IMPORTANTE: 
+	El comando apt-get remove solo elimina el software de tu sistema, 
+	pero no la configuración o los archivos de datos del paquete.
+
+apt-get purge [paquete/software]
+	El comando apt-get purge se utiliza cuando deseas eliminar completamente un software de tu sistema 
+	con su configuración o archivos de datos para que ya no estén disponibles configuraciones personalizadas 
+	durante la reinstalación.
+
+-------------------------------------------------
+
+Dispositivos<Portapapeles compartido<bidireccional
+	    <Arrastrar y soltar< bidireccional
+
+Dispositivos < Insertar imagen... <<Guest Additions..>>
+	ejecutar en terminal apt-get install gcc make perl
+	Clic en el disco (icono que se acaba de habilitar)
+	Clic derecho sobre autorun.sh y ejecutar como programa
+Reiniciar máquina
+
+Guest Additions es un conjunto de controladores de dispositivos y aplicaciones del sistema
+que se encargan de optimizar el sistema operativo para ofrecer el mejor rendimiento y usabilidad posible.
+
+--------------------------------------------------------
+
+
+man [comando] -> manual
+
+ls
+	enumera todos los archivos y carpetas en tu directorio de trabajo actual
+
+Opciones:
+	-a  muestra también archivos ocultos
+	-d  muestra solo los directorios
+	-r   (recursivo) muestra el contenido del directorio y el de sus subdirectorios
+	-s  muestra archivos y directorios con sus tamaños (en bytes)
+	-S  ordenar por tamaño en orden descendente
+		en ascendente con -rS    (r de reverso)
+	-l  muestra el contenido del directorio en formato tabla
+		r lectura
+		w escritura
+		x ejecución
+		- denegado
+
+Se pueden mezclar: 
+ls -la
+
+touch hola.txt
+	compruebo permisos
+
+chmod 
+	cambiar permisos en un archivo
+	EJ:
+		chmod +x archivo.txt
+		chmod 666 archivo.txt
+		666	Leer y escribir (RW)
+		754	Leer, escribir y ejecutar para el propietario, leer y ejecutar para el grupo y solo lectura para el resto de los usuarios
+		444	Leer para el propietario, el grupo y el resto de los usuarios
+
+
+cat nombreArchivo
+	muestra el contenido de un archivo
+
+
+cd directorio
+	cambiar de directorio
+	/ te lleva al raíz
+	.. ir al padre del actual
+	~ (cntr+alt 4 / alt gr+4) ir al directorio principal
+
+pwd 
+	ver directorio actual
+
+cp 
+	copiar archivos o directorios
+	EJ: cp archvio_origen.txt archivo_destino.txt
+	    cp archivo_origen.txt /Desktop
+	    cp -r directorio1  directorio2   (copiara de forma recursiva directorio1)
+ 	
+mv    
+	Mover archivos o dirctorios
+	mv archivio.txt /directorio
+
+rm  
+	elimina el archivo
+	EJ: rm archivo/directorio (tiene la opción -r)
+
+
+mkdir
+	crea un directorio
+	si estableces la ruta lo crea ahí, si no en el directorio actual
+
+history
+	lista todos los comandos ejecutados
+
+psswd  
+	cambiar contraseña del usuario (pedirá unos requisitos .. 8 caracteres, etc.)
+
