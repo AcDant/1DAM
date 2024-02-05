@@ -46,6 +46,17 @@ const datos = {
 const nombre = document.querySelector('#nombre');
 const email = document.querySelector('#email');
 const mensaje = document.querySelector('#mensaje');
+
+nombre.addEventListener('input', function(e){
+    console.log(e.target.value);
+})
+email.addEventListener('input', function(e){
+    console.log(e.target.value);
+})
+mensaje.addEventListener('input', function(e){
+    console.log(e.target.value);
+})
+
 formulario.addEventListener('submit',function(e){
     e.preventDefault();
 })
