@@ -133,9 +133,8 @@ const mensajeEnviar = (mensaje, clase) =>{
     mostrar.textContent = mensaje;
     mostrar.classList.add(clase);
     formulario.appendChild(mostrar);
-    
     setTimeout(()=>{
-        alerta.remove()
+        mostrar.remove()
         },2000)
     }
 
