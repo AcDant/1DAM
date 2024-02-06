@@ -90,14 +90,12 @@ formulario.addEventListener('submit',function(e){
     e.preventDefault();
 
     // Comprobar que no haya campos de datos vacios
-
     const {nombre, email, mensaje} = datos;
-
     // Si un campo esta vacio, mostrar error
 if(nombre === "" || email === "" ||mensaje === ""){
     // const hayError= true;
     // mostrarError("Todos los campos son obligatorios");
-    mensajeEnviar("tODOS LOS CAMPOS SON OBLIGATORIOS", 'error')
+    mensajeEnviar("Todos los campos son obligatorios", 'error')
     return;
 }
     // Si todo esta correcto enviar y mostrar mensaje de enviado
@@ -130,9 +128,16 @@ if(nombre === "" || email === "" ||mensaje === ""){
 // }
 
 
-const mensajeEnviar = (hayError) =>{
-    const mensaje = document.createElement('p')
-}
+const mensajeEnviar = (mensaje, clase) =>{
+    const mostrar = document.createElement('p')
+    mostrar.textContent = mensaje;
+    mostrar.classList.add(clase);
+    formulario.appendChild(mostrar);
+    
+    setTimeout(()=>{
+        alerta.remove()
+        },2000)
+    }
 
 
 
