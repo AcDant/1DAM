@@ -1,0 +1,14 @@
+.sections{
+    display: flex;
+    justify-content: space-around;
+
+}
+
+.section{
+    height: 10rem;
+    width: 10rem;
+    /* background-color: blue; */
+    height: 25rem;
+    padding: 1rem;
+    border: solid red 2px;
+}
