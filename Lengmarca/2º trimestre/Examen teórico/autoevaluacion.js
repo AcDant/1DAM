@@ -11,7 +11,6 @@ function multiplica(numero) {
     let elemento = document.createElement("p");
     elemento.innerHTML = numero + " * " + i + "= " + i * numero;
     multiplicar.appendChild(elemento);
-    // console.log(7*i)
   }
 }
 
@@ -22,7 +21,6 @@ function suma(numero) {
     let calculo = numero + i;
     elemento.innerHTML = numero + " + " + i + "= " + calculo;
     sumar.appendChild(elemento);
-    //   console.log(8 + i);
   }
 }
 
@@ -32,29 +30,29 @@ function division(numero) {
     let elemento = document.createElement("p");
     elemento.innerHTML = numero + " / " + i + "= " + numero / i;
     dividir.appendChild(elemento);
-    //   console.log(9 / i);
   }
 }
 
 function eliminarHTML() {
-
   const element = document.querySelectorAll(".section");
   const element1 = document.querySelector(".section1");
   const element2 = document.querySelector(".section2");
   const element3 = document.querySelector(".section3");
 
-  for (i=0;element.length;i++){
-    while (element[i].firstChild){
-      element[i].removeChild(element[i].firstChild)
-    }
-    // element[i].removeChild(element1)
+  while (element1.firstChild) {
+    element1.removeChild(element1.firstChild);
   }
-  console.log(element1);
-  // const pepe = element.removeChild(element1)
-//  element.removeChild(element1)
-    // const element = document.getElementById("idOfParent");
-    // while (element.firstChild) {
-      // element.removeChild(element.firstChild);
+  while (element2.firstChild) {
+    element2.removeChild(element2.firstChild);
+  }
+  while (element3.firstChild) {
+    element3.removeChild(element3.firstChild);
+  }
+
+  // for (i=0;element.length;i++){
+  //   while (element[i].firstChild){
+  //     element[i].removeChild(element[i].firstChild)
+  //   }
   // }
 }
 
@@ -67,3 +65,7 @@ function operar() {
   suma(numeroValor);
   division(numeroValor);
 }
+
+
+// Apartado 2
+
