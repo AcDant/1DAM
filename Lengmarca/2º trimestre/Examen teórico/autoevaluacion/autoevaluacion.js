@@ -5,15 +5,6 @@ const multiplicar = document.querySelector(".section1");
 const sumar = document.querySelector(".section2");
 const dividir = document.querySelector(".section3");
 
-
-// Apartado 2
-
-const botonBin = document.getElementById("binario")
-const botonBin2 = document.getElementById("binario2") 
-
-
-// Fin apartado 2
-
 function multiplica(numero) {
   console.log("Tabla multiplicar " + numero);
   for (i = 1; i <= 10; i++) {
@@ -43,7 +34,7 @@ function division(numero) {
 }
 
 function eliminarHTML() {
-  const element = document.querySelectorAll(".section");
+  // const element = document.querySelectorAll(".section");
   const element1 = document.querySelector(".section1");
   const element2 = document.querySelector(".section2");
   const element3 = document.querySelector(".section3");
@@ -77,36 +68,56 @@ function operar() {
 
 
 // Apartado 2
-// let pvalorBin = "77"
-// let valorBinNumero;
-// let valorOnBin;
-// valorOnBin = Number(pvalorBin).toString(2);
-// console.log(valorOnBin)
-
-// const botonBin = document.getElementById("binario3")
-// const botonBin2 = document.getElementById("binario2") 
-// const botonBin4 = document.getElementById("binario4") 
-console.log(botonBin);
-console.log(botonBin2);
-console.log(botonBin4);
-console.log(numero);
-let valorBin = document.querySelector("#num-bin"); 
+ 
+// console.log(numero);
+let boton2 = document.querySelector("#binario");
+boton2.addEventListener("click", calcula)
+let valorBin = document.querySelector("#num-bin").value; 
+let valorBin2 = document.querySelector("#num-bin2").value; 
+let resultadoBin = document.querySelector(".resultado");
+// console.log(valorBin)
 
 
-if(botonBin != null){
-  // Adding a click event script to null object
-  botonBin.addEventListener('click', calcula)
-}else{
-  console.warn(`#SampleEl Object or Element Does not exists or not yet loaded.`)
-}
-
-// botonBin.addEventListener("click", calcula);
+// numero.addEventListener("click", operar);
+// let valor = document.querySelector("#valor").value;
+// const multiplicar = document.querySelector(".section1");
+// const sumar = document.querySelector(".section2");
+// const dividir = document.querySelector(".section3");
 
 
 function calcula(){
-  console.log(valorOnBin)
+  // console.log(valorOnBin)
+  resultadoBin.removeChild(elemento1)
   valorBin = document.querySelector("#num-bin").value;
-  let valorBinNumero;
+  valorBin2 = document.querySelector("#num-bin2").value;
+  let dividendo = Number(valorBin).toString(2);
+  let mostrarDivision;
+  let mostrarMultiplicacion;
+   let divisor =  Number(valorBin2);
+  dividendo = dividendo.toString();
+  mostrarDivision = dividendo.slice(0,-(divisor/2))
+  mostrarMultiplicacion = dividendo.slice()
+  let elemento1 = document.createElement("p");
+  elemento1.innerHTML = mostrarDivision;
+  resultadoBin.appendChild(elemento1)
+
+
+  console.log(mostrarDivision)
+
   let valorOnBin;
   valorOnBin = Number(valorBin).toString(2);
 }
+
+// Sabiendo que cuando desplazamos 1 bit a la derecha dividimos un entero por 2 y cuando lo desplazamos a la izquierda estamos multiplicando por 2.
+// Tu aplicación también debe imprimir el resultado de las siguientes operaciones empleando desplazamiento de bits:
+
+// 125 / 8 =
+// 40 x 4 =
+// 25 / 2 =
+// 10 x 16 =
+
+// primerOperando = 125;
+// segundoOperando = 8;
+
+// binario1 = primerOp.toString(2);
+// console.log(binario1);
