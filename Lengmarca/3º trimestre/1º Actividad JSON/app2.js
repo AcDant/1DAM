@@ -37,11 +37,13 @@ request.onload = function () {
       const myPara2 = document.createElement("p");
       const myPara3 = document.createElement("p");
       const myList = document.createElement("ul");
+      const imagen = document.createElement("img");
   
       myH2.textContent = heroes[i].name;
       myPara1.textContent = "Secret identity: " + heroes[i].secretIdentity;
       myPara2.textContent = "Age: " + heroes[i].age;
       myPara3.textContent = "Superpowers:";
+      imagen.src=heroes[i].imagencita;
   
       const superPowers = heroes[i].powers;
       for (var j = 0; j < superPowers.length; j++) {
@@ -55,7 +57,7 @@ request.onload = function () {
       myArticle.appendChild(myPara2);
       myArticle.appendChild(myPara3);
       myArticle.appendChild(myList);
-  
+      myArticle.appendChild(imagen);
       section.appendChild(myArticle);
     }
   }
