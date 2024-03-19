@@ -62,7 +62,6 @@ request.onload = function () {
 
 
 
-
 // const superHeroes = JSON.parse( {
 //     "squadName": "Super hero squad",
 //     "homeTown": "Metro City",

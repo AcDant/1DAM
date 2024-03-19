@@ -1,7 +1,7 @@
 const header = document.querySelector("header");
 const section = document.querySelector("section");
 
-const requestURL = "https://mdn.github.io/learning-area/javascript/oojs/json/superheroes.json";
+const requestURL = "./json.json";
 
 const request = new XMLHttpRequest;
 

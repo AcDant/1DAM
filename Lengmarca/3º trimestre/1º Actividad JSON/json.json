@@ -32,6 +32,15 @@
           "Teleportation",
           "Interdimensional travel"
         ]
+      },
+      {
+        "name": "Mega Pepe",
+        "age": 56,
+        "secretIdentity": "Pepe",
+        "powers": [
+          "Altura",
+          "aguita"
+        ]
       }
     ]
   }
