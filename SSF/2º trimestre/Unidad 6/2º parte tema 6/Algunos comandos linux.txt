@@ -1,0 +1,28 @@
+history
+date
+whoami
+who
+sudo
+uname : info del equipo y sistema operativo
+exit : salir del usuario
+logout : mismo que exit
+reboot: reiniciar sistema
+shutdown : este es como reboot pero te ofrece mas opciones
+stat fichero.txt : informacion del fichero
+du : espacio disponible en disco
+df : espacio disponible en particiones de disco
+whereis fichero.txt: donde esta ese fichero
+find : buscar fichero	 find . -iname fichero.txt  : el punto indica que busca desde donde estas y -iname que buscas por nombre de archivo
+			 find . -iname "*.txt" : busca los que por nombre tengan cualquier cosa y sean txt
+ps : ver procesos
+pstree : ver arbol de procesos
+jobs :mustra las tareas que hay
+
+para ejecutar cosas en 2º plano añadir el & al final del comando
+kill : matar proceso
+
+
+formatear un pedrive? EXT4 - linux ; NTFS - windows
+
+PATH : es una variable de entorno, guarda las rutas de los comandos
+USER : variable de entorno, guarda el usuario actual
