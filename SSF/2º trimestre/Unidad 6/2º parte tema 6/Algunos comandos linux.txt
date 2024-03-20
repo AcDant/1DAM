@@ -1,3 +1,6 @@
+El fichero tmp tiene permiso rwt para todos los usuarios, t minuscula indica que los usuarios solo pueden borrar sus propios archivo (apoarte de root que puede borrarlos todos), si la T es mayuscula, todos pueden borrar lo de todos
+grep -w (sea igual a lo que escribas), -v (no aparece el patron), -E (vas a usar una expresion regular)
+
 history
 date
 whoami
