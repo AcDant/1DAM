@@ -1,0 +1,7 @@
+<!ELEMENT concurso_musical (informacion, participantes)>
+<!ELEMENT informacion (titulo, sede, fecha_inicio, fecha_fin, edicion)>
+<!ELEMENT sede (direccion, localidad, provincia)>
+<!ELEMENT participantes (participacion+)>
+<!ELEMENT participacion (banda|integrante)>
+<!ELEMENT banda (integrante, integrante+)>
+<!ELEMENT integrante (nombre, apellidos, dni, gecha_nacimiento)>
