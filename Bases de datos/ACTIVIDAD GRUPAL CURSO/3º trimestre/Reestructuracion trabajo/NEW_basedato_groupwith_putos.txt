@@ -1,0 +1,30 @@
+trabajador(ID_,dni,nombre,nacionalidad,fecha_nacimiento,tipo,ID_EQUIPO*)
+ID_EQUIPO REFERENCE equipo(ID);
+
+
+mecanico(ID*_,tarea_pit_stop)
+ID hace references a trabajador(ID);
+
+ing_coche(ID*_,area_de_coche)
+ID hace references a trabajador(ID);
+
+ing_estrategia(ID*_,localizacion)
+id hace reference a trabajador(ID);
+
+equipo(ID_, nacionalidad,nombre,año_fundacion);
+
+piloto(nacionalidad,ID_,numero,IDequipo*,nombre)
+id_equipo references equipo(ID);
+
+carrera(fecha,temporada,id_,idcircuito*,id_temporada),
+idcircuito references circuito(id)
+idtemporada referencia temporada(id);
+
+realiza( id_piloto_*,id_carrera_*),
+id_piloto hace references piloto(id),
+id_carrera references carrera(id);
+
+circuito(longitud,ubicacion,nombre,id_,nvueltas);
+
+temporada(Id_,año);
+
