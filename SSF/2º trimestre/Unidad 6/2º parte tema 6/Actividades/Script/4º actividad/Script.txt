@@ -1,0 +1,34 @@
+#!/bin/bash
+
+#Realizar un script al que le pases por parámetro el nombre de un fichero, y saque por pantalla en dónde se encuentra. 
+#Si no existe, pues crea un fichero con el mismo nombre en el directorio personal.
+
+#Tener en cuenta que se le pase al script un parámetro.
+
+#Uso del find
+
+#Añadir al script lo siguiente:
+
+#Dale la bienvenida al usuario poniendo el nombre completo 
+#que se almacena en el fichero de configuración.
+
+#Pista: Ten en cuenta que tienes que usar el cut para sacar 
+#del fichero correspondiente el campo, y otro cut para sacar la parte que te interesa de ese campo
+
+
+if [ $# -eq 1 ]; then
+	if [ -z $(find ~ -name $1) ]; then
+		echo "no existe, creando"
+		touch $HOME/$1
+	else
+		find ~ -iname $1
+	
+	fi
+
+else
+	echo "No me has pasado un parametro"	
+fi
+
+#archivo= $( find $HOME -name $1 )
+#echo "Archivo $archivo"
+#buscnombre= cut

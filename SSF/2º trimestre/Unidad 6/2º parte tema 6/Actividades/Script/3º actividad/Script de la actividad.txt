@@ -1,0 +1,16 @@
+#!/bin/bash
+
+#Script al que le pases por parametro el nombre de un fichero y digas en donde se encuentra dentro de tu di rectorio personal (usar variable de entorno)
+#si no existe, puedes crear un fichero con el mismo nombre en tu carpeta personal
+if [ $# -eq 1 ]; then
+#	echo "$1"
+#	encontrado=$(find ~/ -iname $1);
+	if [ -z "$(find ~ -iname $1)" ]; then
+		echo "no existe, creando"
+		touch $HOME/$1
+	else
+		find ~ -iname $1
+	fi
+else
+echo "pasame un parametro"
+fi
