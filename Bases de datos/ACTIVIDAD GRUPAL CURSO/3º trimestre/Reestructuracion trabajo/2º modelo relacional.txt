@@ -16,11 +16,11 @@ equipo(ID_, nacionalidad,nombre,año_fundacion);
 piloto(nacionalidad,ID_,numero,IDequipo*,nombre)
 id_equipo references equipo(ID);
 
-carrera(fecha,temporada,id_,idcircuito*,id_temporada),
+carrera(fecha,id_,idcircuito*,id_temporada),
 idcircuito references circuito(id)
 idtemporada referencia temporada(id);
 
-realiza( id_piloto_*,id_carrera_*),
+Resultados( id_piloto_*,id_carrera_*, puntos_carrera, posicion),
 id_piloto hace references piloto(id),
 id_carrera references carrera(id);
 

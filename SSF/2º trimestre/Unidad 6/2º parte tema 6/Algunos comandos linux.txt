@@ -23,7 +23,10 @@ jobs :mustra las tareas que hay
 
 para ejecutar cosas en 2º plano añadir el & al final del comando
 kill : matar proceso
+kill -9 numero_proceso fuerza matar al proceso, se suele usar así siempre, para saber cual es el número del proceso se usa el comando ps
+kill -HUP reinicia proceso
 
+top: muestra los procesos en tiempo real
 
 formatear un pedrive? EXT4 - linux ; NTFS - windows
 
