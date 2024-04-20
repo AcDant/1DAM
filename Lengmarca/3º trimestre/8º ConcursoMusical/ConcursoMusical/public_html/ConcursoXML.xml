@@ -1,0 +1,54 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!-- <!DOCTYPE concurso_musical SYSTEM "Concurso.dtd">
+<concurso_musical id="C01"> -->
+<!-- <concurso_musical id="C01" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+xsi:noNamespaceSchemaLocation="XSDConcurso.xsd"> -->
+
+<concurso_musical id="C01" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+xsi:noNamespaceSchemaLocation="XMLSchemaxsd.xsd">
+    
+    <informacion>
+        <titulo>Andalumusic Baladas Populares</titulo>
+    <sede>
+        <direccion> Av Andalucia Nº 25 Pabellon de la Salud</direccion>
+        <localidad>Rota</localidad>
+        <provincia>Cádiz</provincia>
+    </sede>
+        <fecha_inicio>2022-02-24</fecha_inicio>
+        <fecha_fin>2022-02-28</fecha_fin>
+        <edicion>2</edicion>
+    </informacion>
+    <participantes>
+        <participacion cod="AC234"> 
+            <banda nombre="Rayo Azul" tipo="Rock"/>
+                <!-- El integrante vocal, no tendra atribito instrumento -->
+                <integrante>
+                    <nombre>Armando</nombre>
+                    <apellidos>Santos Garcia</apellidos>
+                    <dni>27842742T</dni>
+                    <fecha_nacimiento>1982-01-12</fecha_nacimiento>
+                    <lider />
+                </integrante>
+                <integrante instrumento="guitarra">
+                    <nombre>Eduardo</nombre>
+                    <apellidos>Rodriguez Lopez</apellidos>
+                    <dni>87654321U</dni>
+                    <fecha_nacimiento>1999-12-04</fecha_nacimiento>
+                </integrante>       
+                <integrante instrumento="bajo">
+                    <nombre>Pedro</nombre>
+                    <apellidos>Dominguez Serrano</apellidos>
+                    <dni>12312312Y</dni>
+                    <fecha_nacimiento>1983-04-23</fecha_nacimiento>
+                </integrante>
+        </participacion>
+        <participacion cod="AS234"> 
+                <integrante instrumento="pianista">
+                    <nombre>José Ramón Fernández de la Osa</nombre>
+                    <apellidos></apellidos>
+                    <dni></dni>
+                    <fecha_nacimiento></fecha_nacimiento>
+                </integrante>
+        </participacion> 
+    </participantes>    
+</concurso_musical>

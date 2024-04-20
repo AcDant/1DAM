@@ -1,0 +1,36 @@
+<!-- Elementos complejos -->
+<!ELEMENT concurso_musical (informacion, participantes)>
+<!ELEMENT informacion (titulo, sede, fecha_inicio, fecha_fin, edicion)>
+<!ELEMENT sede (direccion, localidad, provincia)>
+<!ELEMENT participantes (participacion+)>
+<!ELEMENT participacion ((banda, integrante, integrante+) | integrante)>
+<!ELEMENT integrante (nombre, apellidos, dni, fecha_nacimiento, lider?)>
+
+<!-- Elementos terminales -->
+<!ELEMENT titulo (#PCDATA)>
+<!ELEMENT fecha_inicio (#PCDATA)>
+<!ELEMENT fecha_fin (#PCDATA)>
+<!ELEMENT edicion (#PCDATA)>
+<!ELEMENT direccion (#PCDATA)>
+<!ELEMENT localidad (#PCDATA)>
+<!ELEMENT provincia (#PCDATA)>
+
+<!ELEMENT nombre (#PCDATA)>
+<!ELEMENT apellidos (#PCDATA)>
+<!ELEMENT dni (#PCDATA)>
+<!ELEMENT fecha_nacimiento (#PCDATA)>
+<!ELEMENT lider EMPTY>
+<!ELEMENT banda EMPTY>
+
+
+<!-- Atributos -->
+<!-- IMPLIED es opcional, CDATA es texto, NMTOKEN es que no tenga espacios -->
+<!ATTLIST concurso_musical id NMTOKEN #REQUIRED>
+<!ATTLIST participacion cod ID #REQUIRED>
+<!ATTLIST banda nombre CDATA #REQUIRED
+                tipo CDATA #REQUIRED>
+<!ATTLIST integrante instrumento CDATA #IMPLIED> <!-- IMPLIED es opcional -->
+
+
+
+

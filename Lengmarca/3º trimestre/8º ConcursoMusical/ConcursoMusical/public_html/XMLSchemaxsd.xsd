@@ -1,0 +1,153 @@
+<?xml version="1.0"?>
+<!--
+Click nbfs://nbhost/SystemFileSystem/Templates/Licenses/license-default.txt to change this license
+Click nbfs://nbhost/SystemFileSystem/Templates/XML/XmlSchema.xsd to edit this template
+-->
+
+<xs:schema version="1.0"
+           xmlns:xs="http://www.w3.org/2001/XMLSchema"
+           elementFormDefault="qualified">
+
+    <xs:annotation>
+        <xs:documentation>
+            <titulo>XSD De concurso musical</titulo>
+            <modulo>
+                Lenguajes de marcas
+            </modulo>
+        </xs:documentation>
+    </xs:annotation>
+    
+    <!-- elementos complejos -->
+    
+    <xs:element name="concurso_musical">
+        <xs:annotation>
+            <xs:documentation>Elemeto raíz complejo</xs:documentation>
+        </xs:annotation>
+        <xs:complexType>
+            <xs:sequence>
+                <xs:element ref="informacion"/>
+                <xs:element ref="participantes"/>
+            </xs:sequence>
+            <xs:attribute ref="id" use="required"/>
+        </xs:complexType>
+    </xs:element>
+    
+        <xs:element name="informacion">
+        <xs:complexType>
+            <xs:sequence>
+                <xs:element ref="titulo"/>
+                <xs:element ref="sede"/>
+                <xs:element ref="fecha_inicio"/>
+                <xs:element ref="fecha_fin"/>
+                <xs:element ref="edicion"/>
+            </xs:sequence>
+  <!--          <xs:attribute ref="id" use="required"/> -->
+        </xs:complexType>
+    </xs:element>
+    
+    <xs:element name="sede">
+        <xs:complexType>
+            <xs:sequence>
+                <xs:element ref="direccion"/>
+                <xs:element ref="localidad"/>
+                <xs:element ref="provincia"/>
+            </xs:sequence>
+   <!--         <xs:attribute ref="" use="required"/> -->
+        </xs:complexType>
+    </xs:element>
+    
+    <xs:element name="participantes">
+        <xs:complexType>
+            <xs:sequence>
+            <!-- minOccurs="0" lo deja como opcional, maxOccurs="unbounded" lo deja como maximo ilimitado -->
+                <xs:element ref="participacion"  maxOccurs="unbounded"/>
+           <!-- <xs:element ref="participacion" minOccurs="3" maxOccurs="4"/> -->
+            </xs:sequence>
+        </xs:complexType>
+    </xs:element>
+    
+    <xs:element name="participacion">
+        <xs:complexType>
+            <xs:choice>
+             <!-- banda -->
+                 <xs:sequence>
+                     <xs:element ref="banda"  maxOccurs="unbounded"/>
+                     <xs:element ref="integrante" minOccurs="2" maxOccurs="unbounded"/>
+                 </xs:sequence>
+            <!-- solista -->
+                <xs:element ref="integarnte"  maxOccurs="unbounded"/>
+            </xs:choice>
+            <xs:attribute ref="cod" use="required"/>
+        </xs:complexType>
+    </xs:element>
+    
+    <xs:element name="banda">
+        <xs:complexType>
+            <xs:attribute ref="nombre" use="required"/>
+            <xs:attribute ref="tipo" use="required"/>
+        </xs:complexType>
+    </xs:element>
+    
+    <xs:element name="integrante">
+        <xs:complexType>
+                 <xs:sequence>
+                     <xs:element ref="nombre"/>
+                     <xs:element ref="apellidos"/>
+                     <xs:element ref="dni"/>
+                     <xs:element ref="fecha_nacimiento"/>
+                     <xs:element ref="lider" minOccurs="0"/>
+                 </xs:sequence>
+            <xs:attribute ref="instrumento" use="optional"/>
+        </xs:complexType>
+    </xs:element>
+    
+    <xs:element name="titulo" type="xs:string">
+        <xs:complexType>
+            
+        </xs:complexType>
+    </xs:element>
+    
+        <!-- elementos simples -->
+    
+      <!--      <xs:element name="titulo" type="xs:string"/> -->
+            <xs:element name="fecha_inicio" type="xs:date"/>
+            <xs:element name="fecha_fin" type="xs:date"/>
+            <xs:element name="edicion" type="xs:positiveInteger"/> 
+            <xs:element name="direccion" type="xs:string"/>
+            <xs:element name="localidad" type="xs:string"/>
+            <xs:element name="provincia" type="xs:string"/>
+            
+            <xs:element name="nombre" type="xs:string"/>
+            <xs:element name="apellidos" type="xs:string"/>
+            <xs:element name="fecha_nacimiento" type="xs:string"/>
+            
+            <xs:element name="dni" type="xs:string">
+                <xs:simpleType>
+                    <xs:restriction>
+                        <xs:pattern value="\d{8}[A-Z]"/>
+                    </xs:restriction>
+                </xs:simpleType>
+            </xs:element>
+            
+    <!-- atributos -->
+     <xs:attribute name="instrumento" type="xs:string"/>
+     <xs:attribute name="nombre" type="xs:string"/>
+     <xs:attribute name="tipo" type="xs:string"/>
+
+    <xs:attribute name="id" type="xs:string">
+        <xs:simpleType>
+            <xs:restriction base="xs:string">
+                <xs:pattern value="[A-Z]\d{2}"/>
+            </xs:restriction>
+        </xs:simpleType>
+    </xs:attribute>
+   
+    <xs:attribute name="cod" type="xs:string">
+        <xs:simpleType>
+            <xs:restriction base="xs:ID">
+                <xs:pattern value="[A-Z]\d{2}"/>
+            </xs:restriction>
+        </xs:simpleType>
+    </xs:attribute>
+    
+</xs:schema>
