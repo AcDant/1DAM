@@ -75,7 +75,7 @@ Click nbfs://nbhost/SystemFileSystem/Templates/XML/XmlSchema.xsd to edit this te
                      <xs:element ref="integrante" minOccurs="2" maxOccurs="unbounded"/>
                  </xs:sequence>
             <!-- solista -->
-                <xs:element ref="integarnte"  maxOccurs="unbounded"/>
+                <xs:element ref="integrante"  maxOccurs="unbounded"/>
             </xs:choice>
             <xs:attribute ref="cod" use="required"/>
         </xs:complexType>

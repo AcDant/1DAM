@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!-- Elementos complejos -->
+<!ELEMENT torneo (participante+)>
+<!ELEMENT participante (nombre, edad, pais, cabezaDeSerie?)>
+
+<!-- Elementos simples -->
+<!ELEMENT nombre (#PCDATA)>
+<!ELEMENT edad (#PCDATA)>
+<!ELEMENT pais (#PCDATA)>
+<!ELEMENT cabezaDeSerie EMPTY>
+
+<!-- atributos -->
+<!ATTLIST torneo edicion NMTOKEN #REQUIRED>
+<!ATTLIST torneo anteriorGanador NMTOKEN #REQUIRED>
+
+<!ATTLIST participante idP ID #REQUIRED>
+<!ATTLIST participante pareja IDREF #REQUIRED>
+
+
+
+
+
