@@ -1,5 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<impresoras id="C01" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="SchemaXSDimpresoras.xsd">
+
+<impresoras id="C01" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="ojeda_martel_daniel_impresoras.xsd">
   <impresora numSerie="i245" tipo="láser" compra="2010">
     <marca>Epson</marca>
       <modelo>EPL300</modelo>
