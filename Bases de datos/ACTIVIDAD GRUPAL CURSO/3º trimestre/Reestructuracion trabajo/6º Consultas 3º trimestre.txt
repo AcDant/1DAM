@@ -1,0 +1,27 @@
+
+Antes de realizar las consultas, hay que insertar los datos, en este orden debería funcionar,
+cada bloque se puede insertar independientemente, pero tienen que ir en ese orden
+
+Bloque equipos
+1º Crear los equipos (4)
+2º trabajadores (3 por equipo)
+3º mecanicos, ing_coche, ing_estrategia en referencia a trabajadores
+4º Pilotos (estos no estan en la tabla trabajadores) (2 por equipo)
+
+Bloque carreras
+1º temporada (2 temporadas)
+2º circuito (6 circuitos)
+3º carreras (6 carreras)
+
+Con equipos y carreras se hace inserta en resultados
+
+
+Consultas a realizar en la nueva entrega del proyecto:
+1. Muestra todos los ingenieros, mostrando primero los más jóvenes.
+2. Mostrar el número de trabajadores por equipo.
+3. Mostrar el nombre del equipo y el nombre del piloto
+4. Mostrar todos (todos los campos) los pilotos y la fecha de la carrera de una temporada X (la eligen ustedes).
+5. Mostrar el número de pilotos que han participado en una carrera este año.
+6. Mostrar el nombre del equipo, el nombre del piloto, su número, la fecha y la temporada de la carrera, así como el nombre del circuito , la ubicación, longitud y n vueltas.
+7. Mostrar el número de trabajadores, el nombre del piloto y el nombre del equipo por equipo, ordenando por fecha de fundación (de más antiguo a más reciente).
+8. Mostrar el nombre de todos los mecánicos que se encarguen del cambio de ruedas de un equipo X durante una temporada X (lo eligen ustedes).
