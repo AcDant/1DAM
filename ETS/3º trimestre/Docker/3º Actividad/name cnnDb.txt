@@ -1,0 +1,4 @@
+name: cnnDb
+usuario: dam
+clave: daniel
+database: damDb
