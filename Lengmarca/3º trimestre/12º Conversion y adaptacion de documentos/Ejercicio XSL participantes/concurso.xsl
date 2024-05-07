@@ -18,7 +18,8 @@
                     <ol class="participantes">
                         <!-- Lista de participantes-->
                         <xsl:for-each select="//participante">
-                            <li>
+                        <xsl:sort select="apellidos" order="ascending"/>   
+                        <li>
                                 <xsl:value-of select="apellidos"/>
                                 ,. (codigo) - X puntos
                                 <xsl:value-of select="nombre" />.
@@ -35,4 +36,4 @@
             </body>
         </html>
     </xsl:template>
-    | </xsl:stylesheet>
+</xsl:stylesheet>
