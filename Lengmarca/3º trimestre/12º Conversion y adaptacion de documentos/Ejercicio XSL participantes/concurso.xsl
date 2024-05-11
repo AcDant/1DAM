@@ -70,6 +70,70 @@
                             </xsl:apply-templates>
                         </tbody>
                     </table>
+                    
+                    
+                    
+                    <!-- TERCER EJERCICIO -->
+                    
+                    <div class="estad">
+                        <h2>Estadísticas</h2>
+                        <xsl:variable name="v_num_part" select="count(//participante)"/>
+                        <xsl:variable name="v_num_part_18_35" select="count(//participante[edad&gt;=18 and edad&lt;=35])"/>
+                        <xsl:variable name="v_num_part_36_55" select="count(//participante[edad&gt;=36 and edad&lt;=55])"/>
+                        <xsl:variable name="v_num_part_55" select="count(//participante[edad&gt;55])"/>
+                        <ul>
+                            <li><span>Número total de participantes:</span> <span class="stats"> <xsl:value-of select="count(//participante)"/> </span></li>
+                            
+                            <!-- Para redondear la media con un decimal, tendremos que coger la media, multiplicarlo por 10, redondearla y dividir lo resultante entre 10 -->
+                            <li><span>Puntuación media:</span> <span class="stats">
+                                    <xsl:value-of select="round(sum(//participante/puntos) div count(//participante)*10) div 10"/>
+                                </span></li>
+                            
+                            <li><span>Participantes de 18 a 35 años:</span> <span class="stats"><xsl:value-of select="$v_num_part_18_35"/>
+                                    (<xsl:value-of select="($v_num_part_18_35*100) div $v_num_part"/>)
+                                    <xsl:text>%</xsl:text>
+                                </span></li>
+                            
+                            <li><span>Participantes de 36 a 55 años:</span> <span class="stats"> <xsl:value-of select="$v_num_part_36_55"/>
+                                    
+                                    (<xsl:value-of select="format-number($v_num_part_36_55 div $v_num_part, '0.00%')"/>)
+                                </span></li>
+                            
+                            <li><span>Participantes de más de 55 años:</span> <span class="stats"> <xsl:value-of select="$v_num_part_55"/> 
+                                    (<xsl:value-of select="format-number($v_num_part_55 div $v_num_part, '0.00%')"/>)
+                                </span></li>
+                        </ul>
+                        
+                        <!-- 4 EJERCICIO -->
+                        <table class="participantes-t">
+                            <thead>
+                                <tr>
+                                    <th>Provincia</th>
+                                    <th>Nº Participantes</th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <!-- Tabla de participantes por provincia -->
+                                <xsl:for-each select="//participante[not (provincia=preceding::provincia)]">
+                                <xsl:sort select="provincia"/>
+                                <xsl:variable name="v_num_prov" select="provincia"/>
+                                    <tr>
+                                        <td><xsl:value-of select="provincia"/></td>
+                                        <td><xsl:value-of select="count(//participante[provincia=$v_num_prov])"/></td>
+                                    </tr>
+                                </xsl:for-each>
+                                
+                                <tr>
+                                    <td>Provincia A</td>
+                                    <td>15</td>
+                                </tr>
+                                <tr>
+                                    <td>Provincia B</td>
+                                    <td>10</td>
+                                </tr>
+                            </tbody>
+                        </table>
+                    </div>
                 </main>
             </body>
         </html>
