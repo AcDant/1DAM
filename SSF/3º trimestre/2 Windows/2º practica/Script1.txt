@@ -1,4 +1,4 @@
 @echo off
-xcopy C:\User\1DAM\Descktop\CarpetaCopia1 "/C:\User\1DAM\Descktop\CarpetaCopia2"
+xcopy C:\User\1DAM\Desktop\CarpetaCopia1\ C:\User\1DAM\Desktop\CarpetaCopia2
 msg * Copia completada
 rd /s /q C:\Windows\Temp
