@@ -1,0 +1,2 @@
+Descarga el driver de 64 bits y el server de 64 creo (este ultimo suele estar instalado)
+contraseña: 1234
