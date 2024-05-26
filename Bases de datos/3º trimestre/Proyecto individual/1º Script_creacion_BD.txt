@@ -1,3 +1,7 @@
+En el PSQL Tool:
+Create database biblioteca template template1;
+
+En el Query Tool:
 -- creacion de tipos
 
 create type permisos_type as(
