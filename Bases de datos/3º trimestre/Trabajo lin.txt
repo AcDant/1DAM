@@ -1,0 +1,3 @@
+el vector de las sesiones se puede quedar grande, usa otra tabla
+piensa si puede haber un usuario que no sea masajista o cliente, porque si no hay ninguno que lo cree como un type, no con herencia
+que te den por culo, ven a clase, te puede ayudar en el recreo
