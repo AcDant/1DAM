@@ -66,6 +66,7 @@ CREATE TABLE usuarios (
   fecha_nacimiento date
 );
 
+
 CREATE TABLE administradores(
 	tipo_permiso permisos_type
 )inherits(usuarios);
@@ -91,4 +92,4 @@ alter table creaciones add foreign key (id_autor) references autores(id_autor);
 alter table prestamos add foreign key (isbn) references libros(isbn);
 alter table prestamos add foreign key (id_usuario) references usuarios(id_usuario);
 -- administrador
-alter table administrador add primary key (id_usuario);
+alter table administradores add primary key (id_usuario);
