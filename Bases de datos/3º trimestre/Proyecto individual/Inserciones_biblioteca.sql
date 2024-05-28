@@ -1,4 +1,3 @@
-<<<<<<< HEAD
 select * from editoriales;
 select * from autores;
 select * from libros;
@@ -8,16 +7,12 @@ select * from prestamos;
 select * from administradores;
 
 -- editoriales
-=======
--- inserciones en editorial
->>>>>>> c6e55d55ac4f9f3293ba6b701c0fe45d1b0802e1
 insert into editoriales values (default,'jazmin',
 	row('Calle keke',3,'Telde', 'Telde'),'{123123123,321321321}','www.jazmin.com');
 insert into editoriales values (default,'jazmin',
 	row('Calle puentin',2,'Las Remudas', 'Telde'),'{987987987,789789789}','www.jazmin.com');
 insert into editoriales values (default,'jazmin',
 	row('Calle sarajevo',1,'Arucas', 'Arucas'),'{123123123,321321321}','www.jazmin.com');
-<<<<<<< HEAD
 insert into editoriales values (default,'jazmin',
 	row('Calle rumbiente',5,'Telde', 'Telde'),'{123123123,321321321}','www.jazmin.com');
 
@@ -63,14 +58,4 @@ insert into administradores values(default, 'El Admin','Master',
 --	numero integer,
 --	localidad varchar(50),
 --	municipio varchar(50)
-=======
 
--- inserciones libros
-  isbn VARCHAR(50) PRIMARY KEY,
-  titulo VARCHAR(255) NOT NULL,
-  genero VARCHAR(20) NOT NULL,
-  fecha_publicacion DATE NOT NULL,
-  idioma VARCHAR(30) NOT NULL,
-  numero_paginas INTEGER NOT NULL,
-  editorial integer NOT NULL
->>>>>>> c6e55d55ac4f9f3293ba6b701c0fe45d1b0802e1
