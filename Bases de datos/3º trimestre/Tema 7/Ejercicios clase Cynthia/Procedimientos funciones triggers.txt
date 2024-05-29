@@ -1,0 +1,78 @@
+-- crear un procedimiento que inserte alumnos 
+create or replace procedure insertar_alumno(
+		in dni char(9), nombre varchar(25), direccion direccion_type, fecha date, tlf integer[], color colores) language plpgsql
+		AS $$
+		BEGIN
+			insert into alumnos values($1, $2, $3, $4, $5, $6);
+			EXCEPTION -- similar a un try.. catch
+				when unique_violation then 
+					raise sqlstate '23505' using message='No se pueden insertar dos alumnos con el mismo DNI';
+		END $$
+		
+-- llamamos al procedimiento suponiendo que ha nacido hoy y ya es alumno.
+call insertar_alumno('12345678T', 'Prudens', ('c/Libertad',5,'LP','LP'), current_date, '{655433658}' , 'rojo');
+select * from alumnos;
+
+--Alternativa
+create or replace procedure insertar_alumno2(
+		in dni char(9), nombre varchar(25), direccion direccion_type, fecha date, tlf integer[], color colores) language plpgsql
+		AS $$
+		declare variable int default (select alumnos.dni from alumnos where alumnos.dni=$1);
+		BEGIN
+			if variable is null then
+				insert into alumnos values($1, $2, $3, $4, $5, $6);
+			else
+				raise notice 'No se pueden insertar dos alumnos con DNI: % ', $1;
+			end if;
+		END $$;
+		
+call insertar_alumno2('11111118T', 'Mojoyoyo', ('c/Maldad', 15,'Townsville','CN'), current_date, '{655433658}' , 'velde');
+select * from alumnos;
+
+-- salida 
+create or replace procedure insertar_alumno3(
+		in dni char(9), nombre varchar(25), direccion direccion_type, fecha date, tlf integer[], color colores, out salida int) language plpgsql
+		AS $$
+		declare variable int default (select alumnos.dni from alumnos where alumnos.dni=$1);
+		BEGIN
+			if variable is null then
+				insert into alumnos values($1, $2, $3, $4, $5, $6);
+				salida:=1;
+			else
+				salida:=0;
+				raise notice 'No se pueden insertar dos alumnos con DNI: % ', $1;
+			end if;
+		END $$;
+		
+-- necesitamos un bloque dónde declarar la variable de salida.
+do $$
+declare retorno int;
+begin
+	call insertar_alumno3('111', 'Manolito', ('c/Estrés', 1,'LP','LP'), current_date, '{655433658}' , 'azul', retorno);
+	raise notice 'salida es %', retorno;
+end $$
+
+
+-- creacion nombre usuario
+create or replace function nombre_usuario(nombre varchar(25), apellidos varchar(25), fecha date)
+returns varchar(25) AS $$
+declare nombre_user varchar(25);
+begin
+	nombre_user=CONCAT(substring(nombre, 1,1), substring(apellidos, 2,3), fecha);
+	return replace(nombre_user, '-', '/'); -- esto no lo hicimos en clase pero está interesante
+end$$ language plpgsql;
+
+select nombre_usuario('Cynthia', 'Afonso', '29-11-1995');
+
+alter table alumnos add column apellidos varchar(25), add column nombre_usuario varchar(25);
+-- triggers
+create or replace function insert_nombre_usuario() returns trigger as $$
+begin
+	if(new.nombre_usuario is null) then
+		new.nombre_usuario=(select nombre_usuario(new.nombre, new.apellidos, new.fecha));
+		return new;
+	end if;
+END $$ language plpgsql;
+
+create or replace trigger alumnos_BI_trigger before insert on alumnos for each row
+	execute procedure insert_nombre_usuario();

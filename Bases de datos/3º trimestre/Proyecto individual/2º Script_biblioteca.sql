@@ -1,7 +1,4 @@
-En el PSQL Tool:
-Create database biblioteca template template1;
-
-En el Query Tool:
+-- create database biblioteca template template1
 -- creacion de tipos
 
 create type permisos_type as(
@@ -70,10 +67,10 @@ CREATE TABLE usuarios (
   fecha_nacimiento date
 );
 
-CREATE TABLE adminitrador(
+
+CREATE TABLE administradores(
 	tipo_permiso permisos_type
 )inherits(usuarios);
-
 
 -- Tabla Préstamos
 CREATE TABLE prestamos (
@@ -95,3 +92,5 @@ alter table creaciones add foreign key (id_autor) references autores(id_autor);
 -- prestamos
 alter table prestamos add foreign key (isbn) references libros(isbn);
 alter table prestamos add foreign key (id_usuario) references usuarios(id_usuario);
+-- administrador
+alter table administradores add primary key (id_usuario);

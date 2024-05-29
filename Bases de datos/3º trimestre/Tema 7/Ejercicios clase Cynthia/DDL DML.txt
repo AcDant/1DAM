@@ -1,0 +1,86 @@
+
+-- calle, numero, localidad, municipio, cp
+create type direccion_type as(
+	calle varchar(50),
+	numero integer,
+	localidad varchar(50),
+	municipio varchar(50)
+	);
+
+create type colores as enum ('rosa', 'negro', 'rojo', 'velde', 'azul', 'lila');
+
+create table usuarios(
+	dni char(9) primary key,
+	nombre varchar(50),
+	direccion direccion_type,
+	fecha_nac date,
+	tlf integer[],
+	color_fav colores
+);
+
+create table alumnos(
+	nota_media double precision,
+	repetidor boolean
+)inherits (usuarios);
+
+alter table alumnos add primary key (dni);
+
+create table profesores(
+	sueldo float,
+	maldad int,
+	numero_horas int
+)inherits(usuarios);
+alter table profesores add primary key (dni);
+
+create table asignaturas(
+	cod serial primary key, 
+	nombre varchar(30),
+	abreviatura char(3));
+
+
+create table asig_profe
+	(
+	dni char(9),
+	cod integer,
+	primary key(dni, cod),
+	foreign key (dni) references profesores(dni),
+	foreign key (cod) references asignaturas(cod)
+	);
+
+create table notas_alumnos(
+	cod_asignatura integer,
+	dni char(9),
+	calificacion int check(calificacion>=1),
+	evaluacion int,
+	primary key (dni, cod_asignatura, evaluacion),
+	foreign key (dni) references alumnos(dni),
+	foreign key (cod_asignatura) references asignaturas(cod)
+);
+
+create sequence auto_increment 
+	start with 1
+    increment by 2
+	minvalue 1
+	maxvalue 100
+	no cycle;
+
+select nextval('auto_increment');
+
+create table centros 
+	(cod integer default nextval('auto_increment'),
+	nombre varchar(15));
+
+insert into centros values (55, 'IES El rincón');
+select * from centros;
+
+insert into alumnos values('59877988X', 'Lin', ROW('c/ Venezuela', 8, 'Guía', 'Guía'),'2000-10-19', '{111111}', 'rosa');
+update alumnos set direccion=ROW((direccion).calle, 30, (direccion).localidad, (direccion).municipio) where nombre='Lin';
+select nombre, (direccion).calle, (direccion).numero from alumnos;
+select nombre from usuarios; -- salen todos aunque no pertenezcan a la tabla, ya que es una herencia
+
+
+select * from alumnos;
+insert into alumnos values('1111111', 'Daikel', ROW('c/ Moraleja',8, 'Madrid', 'Madrid'), '1980-11-25', '{123456789,123444444}', 'negro');
+select nombre from alumnos where tlf='{123456789}';
+select nombre from alumnos where '123456789'=ANY(tlf);
+update alumnos set tlf=array_replace(tlf, '22222222', '666699777')    where nombre='Daikel';
