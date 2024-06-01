@@ -25,15 +25,13 @@ insert into mecanicos values(1, 1),
 
 -- ing_coche
 insert into ing_coche values(2, 1),
-(5, 2),
-(8, 1),
-(11, 3);
+(5, 2);
 
 -- ing_estrategia
-insert into ing_estrategia values(4, "paddock"),
-(5, "sede"),
-(10, "paddock"),
+insert into ing_estrategia values
+(8, 2),
 (11, "sede");
+
 -- INSERCIONES A ULTIMA HORA
 
 insert into pilotos values
