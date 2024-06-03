@@ -1,0 +1,2 @@
+cls
+fc "C:\Users\1DAM\Desktop\CarpetaCopia1\Archivo1" "C:\Users\1DAM\Desktop\CarpetaCopia2\Archivo2"
